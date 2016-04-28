@@ -2,7 +2,7 @@
 layout: lesson
 title: Reproducible Research
 ---
- 
+Being able to reproduce results (whether they are from someone else or your own past self) is important for the progress of science. Making the steps and materials of a research project public allows scientists to build off of previous work to create new scientific breakthroughs faster. This lesson is a short exercise in creating a reproducible work flow, which should generate discussion on best practices and some difficulties that come up in practice. 
 
 > ## Prerequisites {.prereq}
 >
