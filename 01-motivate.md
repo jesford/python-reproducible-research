@@ -6,38 +6,48 @@ minutes: 10
 ---
 > ## Learning Objectives {.objectives}
 >
-> * Be able to describe why reproducibility and openness is good for science
-> * Be able to describe how a reproducible workflow benefits an individual researcher
+> * Describe why reproducibility and openness is good for science
+> * Explain how a reproducible workflow benefits an individual researcher
 > * Know the purpose of a README file
 
-Paragraphs of text
---- possibly including [key word 1](reference.html#key-word-1) ---
-mixed with:
+Isaac Newton famously [said](https://en.wikiquote.org/wiki/Isaac_Newton) "If I have seen further it is by standing upon the shoulders of giants." Science progresses by building upon past knowledge to design experiments and make new discoveries. When previous results are easy to build upon, new results can be obtained faster with less effort. 
 
-~~~ {.python}
-some code:
-    to be displayed
-~~~
-~~~ {.output}
-output
-from
-program
-~~~
-~~~ {.error}
-error reports from program (if any)
-~~~
-
-and possibly including:
-
-> ## Callout Box {.callout}
+> ## Its not always easy to build off past work... {.challenge}
 >
-> An aside of some kind.
+> Can you give an example of a time you had difficulty understanding how a previous 
+> result was obtained? Did a journal article forget to give all the pertinent details? 
+> Have you ever had to re-do an experiment (or re-write some code) that someone else 
+> had previously done?  
 
-or an image from the `figs` directory:
+Unfortunately, scientists can spend a lot of their time reinventing the wheel, meaning that they are simply trying to re-do what someone else has done in order to take the analysis one step further or in a different direction. But it doesn't have to be this way! By learning to write good code and using version control, you now have some of the essential tools for doing reproducible research. In fact, by simply opening your Jupyter Notebook from the earlier Python lesson, you could quickly and easily reproduce all of our discoveries about that suspicious inflammation data.
 
-![this is the image's title](fig/example.svg "this is the image's alt text")
+The selfish reasons to be reproducible, examples of case studies in increased productivity?
 
-> ## Challenge Title {.challenge}
+> ## Dangers of Non-reproducibility {.callout}
 >
-> Description of a single challenge.
-> There may be several challenges.
+> Examples of some [retracted papers](), because results were not reproducible.
+
+An essential piece of creating reproducible research is clearly documenting what you have done. One way to document your research is by writing papers, but it is usually impossible to give *all* of the details, especially if there is programming involved. Some useful documentation techniques that we have already covered are using comments in your code, and attaching Docstrings to your Python functions.  
+
+> ## Markdown Cells in Jupyter Notebook {.challenge}
+>
+> Navigate to the directory for the previous Python lesson, where we saved our Jupyter Notebook analyzing patient inflammation data. Let's open 
+
+~~~ {.bash}
+$ cd ~/Desktop/python-novice-inflammation
+$ jupyter notebook
+~~~
+
+A final important way to document the use of some code is to create a README file. A README explains the contents of a directly as a whole, not just a single file, and describes how the things in the directory fit together to achieve their intended purpose. A good README contains all the instructions necessary to use the code, data, and any other elements of a self-contained research project.
+
+> ## Create a Simple README file {.challenge}
+>
+> Let's now create a README.md file for this directory, using the same Markdown language
+> that we used for formatted text in the Jupyter Notebook.
+> (provide a fill-in-the-blanks sample README)
+>
+> Compare your README to your neighbors. What other information might be useful to include?
+
+~~~ {.bash}
+$ nano README.md
+~~~
