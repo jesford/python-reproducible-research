@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="pandoc">
+    <title>Software Carpentry: Reproducible Research</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/swc.css" />
+    <link rel="alternate" type="application/rss+xml" title="Software Carpentry Blog" href="http://software-carpentry.org/feed.xml"/>
+    <meta charset="UTF-8" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="lesson">
+    <div class="container card">
+      <div class="banner">
+        <a href="http://software-carpentry.org" title="Software Carpentry">
+          <img alt="Software Carpentry banner" src="img/software-carpentry-banner.png" />
+        </a>
+      </div>
+      <article>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+                    <a href="index.html"><h1 class="title">Reproducible Research</h1></a>
+          <h2 class="subtitle">Motivating Reproducibility</h2>
+          <section class="objectives panel panel-warning">
+<div class="panel-heading">
+<h2 id="learning-objectives"><span class="glyphicon glyphicon-certificate"></span>Learning Objectives</h2>
+</div>
+<div class="panel-body">
+<ul>
+<li>Describe why reproducibility and openness is good for science</li>
+<li>Explain how a reproducible workflow benefits an individual researcher</li>
+<li>Use a Markdown cell to document a Jupyter Notebook</li>
+<li>Know the purpose of a README file</li>
+</ul>
+</div>
+</section>
+<p>Isaac Newton famously <a href="https://en.wikiquote.org/wiki/Isaac_Newton">said</a> “If I have seen further it is by standing upon the shoulders of giants.” Science progresses by building upon past knowledge to design experiments and make new discoveries. When previous results are easy to build upon, new results can be obtained faster with less effort.</p>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="its-not-always-easy"><span class="glyphicon glyphicon-pencil"></span>Its not always easy…</h2>
+</div>
+<div class="panel-body">
+<p>Give an example of a time you had difficulty understanding how a previous result was obtained. Did a journal article forget to give all the pertinent details? Have you ever had to re-do an experiment (or re-write some code) that someone else had previously done? Did you feel that it was a productive use of your time?</p>
+</div>
+</section>
+<p>Unfortunately, scientists can spend a lot of their time reinventing the wheel, which is to say they are simply trying to re-do what someone else has already done in order to take the analysis one step further or in a different direction. But it doesn’t have to be this way! By learning to write good code and using version control, you now have some of the essential tools for doing reproducible research. In fact, by simply opening your Jupyter Notebook from the earlier Python lesson, you could quickly and easily reproduce all of our discoveries about that suspicious inflammation data.</p>
+<p>Making our research reproducible can be helpful for other researchers and science as a whole, but it also has strong concrete benefits for us as individuals. Even if we never share our code with anyone else, making it reproducible <em>for our future self</em> will save us significant time and energy. Creating well-documented and version-tracked projects allows us to be much more efficient in building off our own past work or even remembering what exactly it was we were doing last month before getting sidetracked by that grant or coursework deadline. If we do decide to make our code or data public, we often obtain an <a href="https://peerj.com/articles/175/">increased number of citations</a> for our work!</p>
+<aside class="callout panel panel-info">
+<div class="panel-heading">
+<h2 id="dangers-of-non-reproducibility"><span class="glyphicon glyphicon-pushpin"></span>Dangers of Non-reproducibility</h2>
+</div>
+<div class="panel-body">
+<p>Reproducibility has been making news, as scientists have been forced to retract published papers after their findings turn out to be impossible for others to reproduce. The most well known example was the attempt by the <a href="https://osf.io/vmrgu/">Open Science Collaboration</a> to replicate the findings of 100 high profile psychology studies. They <a href="http://science.sciencemag.org/content/349/6251/aac4716">found</a> that only 39% of the original studies showed significant results when they were repeated, and some have proclaimed the field is in <a href="http://www.apa.org/monitor/2015/10/share-reproducibility.aspx">crisis</a>. Psychology is not the only field with non-replicable results however. Diverse fields have experienced <a href="http://retractionwatch.com/">retractions</a> of well cited scientific results, and the effects of <a href="https://en.wikipedia.org/wiki/Publication_bias">publication bias</a> are widespread.</p>
+</div>
+</aside>
+<p>An essential piece of creating reproducible research is clearly documenting what you have done. One way to document your research is by publishing papers, but it is usually impossible to give <em>all</em> of the details, especially if there is programming involved. Some useful documentation techniques that we have already covered are using comments in your code, and attaching Docstrings to your Python functions.</p>
+<p>The Jupyter Notebook is a great tool for reproducible research because the cells naturally lend themselves to a step-by-step process which anyone else with a copy can execute. The notebook also has nice built-in support for documenting the procedure, through the use of Markdown cells. Let’s see how this works. Navigate to the directory from the previous Python lesson, where we saved our Jupyter Notebook for analyzing patient inflammation data. Let’s open that notebook and add some Markdown documentation.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">cd</span> ~/Desktop/data
+$ <span class="kw">jupyter</span> notebook</code></pre></div>
+<p>After selecting and opening an existing notebook, create a new cell at the very top. Go to the dropdown menu on the toolbar that currently says “Code”, and change it to select “Markdown”. Notice that the number next to the cell disappears – this cell will no longer be interpreted as a block of Python code to execute. Inside of the cell, type the following lines and then execute the cell.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Arthritis Study</span>
+An analysis of inflammation data.
+
+<span class="co">### Details:</span>
+<span class="op">-</span> Study duration: <span class="dv">40</span> days
+<span class="op">-</span> Number of patients: <span class="dv">60</span>
+
+<span class="op">*</span>Note: this data has some suspicious features<span class="op">!</span> Remember to follow up <span class="cf">with</span> the data collection team.<span class="op">*</span></code></pre></div>
+<aside class="callout panel panel-info">
+<div class="panel-heading">
+<h2 id="tips"><span class="glyphicon glyphicon-pushpin"></span>Tips</h2>
+</div>
+<div class="panel-body">
+<p>Use the <code>+</code> button in the toolbar to create a new cell (it will appear underneath whichever cell is currently highlighted). Use the up and down arrows in the toolbar to move the cell to the desired position.</p>
+</div>
+</aside>
+<p>Our Markdown cell gets nicely rendered by the Jupyter Notebook, with different size headers, bullet points and italicized text (many more <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">options</a> are available). It can be useful to add frequent Markdown cells to a notebook, to explain your thought process and the steps of analysis, and to keep track of notes for yourself and others.</p>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="document-a-step"><span class="glyphicon glyphicon-pencil"></span>Document a step</h2>
+</div>
+<div class="panel-body">
+<p>Create another Markdown cell, anywhere in the notebook. Include some notes about the analysis or results.</p>
+</div>
+</section>
+<p>A final important way to document your research code is to create a README file. A README explains the contents of a directly as a whole, and describes how the things in the directory fit together to achieve their intended purpose. A good README contains all the instructions necessary to use the code, data, and any other elements of a self-contained research project.</p>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="create-a-simple-readme-file"><span class="glyphicon glyphicon-pencil"></span>Create a Simple README file</h2>
+</div>
+<div class="panel-body">
+<p>Create a README file for this directory, using the same Markdown syntax that we used for formatted text in the Jupyter Notebook.</p>
+<p><code>$ nano README.md</code></p>
+<p>The <code>.md</code> extension is not required, but it is the convention for a Markdown file. We could also have created a plain text <code>.txt</code> file instead, but then we would not have access to the special Markdown formatting.</p>
+<p><em>Make sure to include:</em> the name of the project, the author(s), the date it was last modified, the language and version of code used, a brief overview of what the project is supposed to do, and how to use it.</p>
+<p>Compare your README to your neighbors. What other information might be useful to include?</p>
+</div>
+</section>
+        </div>
+      </div>
+      </article>
+      <div class="footer">
+        <a class="label swc-blue-bg" href="http://software-carpentry.org">Software Carpentry</a>
+        <a class="label swc-blue-bg" href="https://github.com/swcarpentry/lesson-template">Source</a>
+        <a class="label swc-blue-bg" href="mailto:admin@software-carpentry.org">Contact</a>
+        <a class="label swc-blue-bg" href="LICENSE.html">License</a>
+      </div>
+    </div>
+    <!-- Javascript placed at the end of the document so the pages load faster -->
+    <script src="http://software-carpentry.org/v5/js/jquery-1.9.1.min.js"></script>
+    <script src="css/bootstrap/bootstrap-js/bootstrap.js"></script>
+    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  </body>
+</html>
