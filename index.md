@@ -19,10 +19,10 @@ Being able to reproduce results (whether they are from someone else or your own 
 
 ## Topics
 
-1.  [Motivating Reproducibility](01-motivation.html)
-2.  [Create a Reproducible Plot](02-create-plot.html)
-3.  [Reproduce Another Group's Plot](03-reproduce-plot.html)
-4.  [Best Practices](04-best-practices.html)
+1.  [Motivating Reproducibility](01-motivate.html)
+2.  [Create a Reproducible Plot](02-create.html)
+3.  [Reproduce Another Group's Plot](03-reproduce.html)
+4.  [Best Practices](04-practices.html)
 
 ## Other Resources
 
