@@ -16,9 +16,9 @@ minutes: 10
 > learners is ready to recreate another group's analysis. Within each pair, learners
 > should swap roles of "driver" and "navigator".
 
-In the previous activity you used GitHub to publish your investigation of one of the topics. Now let's find out how easy you made it for another group to understand and reproduce your analysis. If you haven't already done it, swap driver-navigator roles within each pair.
+In the previous activity you used GitHub to publish your investigation of one of the topics. Now let's find out how easy you made it for another group to understand and reproduce your steps. If you haven't already done so, make sure the other person gets to be the one typing at the keyboard.
 
-> ## Reproducible another group's analysis {.challenge}
+> ## Reproduce another group's analysis {.challenge}
 >
 > Start out by going to the repository for the other group, and reading their README 
 > (if one is available). Then clone the repository to your laptop and see if you 
