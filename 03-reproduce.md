@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Reproducible Research
-subtitle: Reproduce Someone Else's Analysis
+subtitle: Reproduce A Workflow
 minutes: 10
 ---
 > ## Learning Objectives {.objectives}
@@ -33,7 +33,10 @@ $ cd my-cool-project
 > ## Tips {.callout}
 >
 > Do you have any questions or suggestions for group who's results you are trying 
-> to reproduce? Pretend they are not in the same room, and submit a GitHub issue:  
-
-
-Now that we have all investigated one of the topics using this dataset, we are going to swap projects and attempt to reproduce results. You will be working with the same partner, but you should switch "drivers" so that the other person is typing on the laptop. 
+> to reproduce? Pretend they are not in the same room (so you can't just talk to 
+> them), and submit a GitHub issue. To create an issue, select "Issues" from the 
+> GitHub toolbar, then click the green button for "New Issue".
+>
+> ![Creating a GitHub Issue](fig/create-issue.png)
+>
+> You can use the same Markdown formatting we discussed earlier. 
