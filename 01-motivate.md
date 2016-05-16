@@ -13,7 +13,7 @@ minutes: 10
 
 Isaac Newton famously [said](https://en.wikiquote.org/wiki/Isaac_Newton) "If I have seen further it is by standing upon the shoulders of giants." Science progresses by building upon past knowledge to design experiments and make new discoveries. When previous results are easy to build upon, new results can be obtained faster with less effort. 
 
-> ## Its not always easy... {.challenge}
+> ## It's not always easy to reproduce results! {.challenge}
 >
 > Give an example of a time you had difficulty understanding how a previous 
 > result was obtained. Did a journal article forget to give all the pertinent details? 
@@ -66,7 +66,8 @@ An analysis of inflammation data.
 >
 > Use the `+` button in the toolbar to create a new cell (it will appear underneath 
 > whichever cell is currently highlighted). Use the up and down arrows in the toolbar 
-> to move the cell to the desired position.
+> to move the cell to the desired position. *Shortcut:* `Esc-A` will add a new cell
+> above the currently selected cell.
 
 Our Markdown cell gets nicely rendered by the Jupyter Notebook, with different size headers, bullet points and italicized text (many more [options](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) are available). It can be useful to add frequent Markdown cells to a notebook, to explain your thought process and the steps of analysis, and to keep track of notes for yourself and others.
 
